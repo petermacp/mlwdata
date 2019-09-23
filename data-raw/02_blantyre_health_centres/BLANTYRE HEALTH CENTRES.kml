@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>HEALTH CENTRES.kml</name>
+	<StyleMap id="msn_blu-blank">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_blu-blank</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_blu-blank</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="BlueFlag18101">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/paddle/blu-blank.png</href>
+			</Icon>
+			<hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<ListStyle>
+			<ItemIcon>
+				<href>http://maps.google.com/mapfiles/kml/paddle/blu-blank-lv.png</href>
+			</ItemIcon>
+		</ListStyle>
+	</Style>
+	<Style id="BlueFlag18100">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/paddle/blu-blank.png</href>
+			</Icon>
+			<hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<ListStyle>
+			<ItemIcon>
+				<href>http://maps.google.com/mapfiles/kml/paddle/blu-blank-lv.png</href>
+			</ItemIcon>
+		</ListStyle>
+	</Style>
+	<Style id="sn_blu-blank">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/paddle/blu-blank.png</href>
+			</Icon>
+			<hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<ListStyle>
+			<ItemIcon>
+				<href>http://maps.google.com/mapfiles/kml/paddle/blu-blank-lv.png</href>
+			</ItemIcon>
+		</ListStyle>
+	</Style>
+	<Style id="sh_blu-blank">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/paddle/blu-blank.png</href>
+			</Icon>
+			<hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<ListStyle>
+			<ItemIcon>
+				<href>http://maps.google.com/mapfiles/kml/paddle/blu-blank-lv.png</href>
+			</ItemIcon>
+		</ListStyle>
+	</Style>
+	<StyleMap id="BlueFlag1810">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#BlueFlag18101</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#BlueFlag18100</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Folder>
+		<name>HEALTH CENTRES</name>
+		<Placemark>
+			<name>Zingwangwa Health Centre</name>
+			<description>13-NOV-14 2:48:55PM</description>
+			<styleUrl>#msn_blu-blank</styleUrl>
+			<Point>
+				<coordinates>35.011841,-15.821477,1035.22</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>South Lunzu Health centre</name>
+			<description>13-NOV-14 7:05:38PM</description>
+			<styleUrl>#msn_blu-blank</styleUrl>
+			<Point>
+				<coordinates>35.054477,-15.726765,999.4099999999999</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Queen Elizabeth hospital</name>
+			<description>11-NOV-14 8:54:55PM</description>
+			<styleUrl>#msn_blu-blank</styleUrl>
+			<Point>
+				<coordinates>35.020748,-15.802124,1068.38</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Ndirande Health Centre</name>
+			<description>11-NOV-14 10:24:14PM</description>
+			<styleUrl>#msn_blu-blank</styleUrl>
+			<Point>
+				<coordinates>35.039746,-15.778197,1115.01</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Mwayiwathu Hospital</name>
+			<description>11-NOV-14 9:03:03PM</description>
+			<styleUrl>#msn_blu-blank</styleUrl>
+			<Point>
+				<coordinates>35.017013,-15.785199,1051.56</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Limbe Health Centre</name>
+			<LookAt>
+				<longitude>35.05280486993816</longitude>
+				<latitude>-15.81747928244618</latitude>
+				<altitude>0</altitude>
+				<heading>0.00587218742256591</heading>
+				<tilt>30.50557048659319</tilt>
+				<range>696.7835367181781</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_blu-blank</styleUrl>
+			<Point>
+				<gx:drawOrder>1</gx:drawOrder>
+				<coordinates>35.05193887662755,-15.81687367420039,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Chitawira Health centre</name>
+			<LookAt>
+				<longitude>35.02217140968516</longitude>
+				<latitude>-15.81323374479213</latitude>
+				<altitude>0</altitude>
+				<heading>0.001590194386486354</heading>
+				<tilt>41.13542171216002</tilt>
+				<range>400.22028603523</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_blu-blank</styleUrl>
+			<Point>
+				<gx:drawOrder>1</gx:drawOrder>
+				<coordinates>35.02282208326272,-15.81285491452962,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Mlambe Health Centre</name>
+			<description>11-NOV-14 9:31:55PM</description>
+			<styleUrl>#msn_blu-blank</styleUrl>
+			<Point>
+				<coordinates>35.017393,-15.644636,726.88</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Chilomoni health centre</name>
+			<description>12-NOV-14 8:26:09PM</description>
+			<styleUrl>#msn_blu-blank</styleUrl>
+			<Point>
+				<coordinates>34.98181,-15.770991,984.0299999999999</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Bangwe Health Centre</name>
+			<description>12-NOV-14 9:24:36PM</description>
+			<styleUrl>#msn_blu-blank</styleUrl>
+			<Point>
+				<coordinates>35.080212,-15.824152,1167.16</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Adventist Hospital</name>
+			<description>12-NOV-14 8:16:35PM</description>
+			<styleUrl>#msn_blu-blank</styleUrl>
+			<Point>
+				<coordinates>35.003499,-15.782303,1095.06</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Chileka health center</name>
+			<LookAt>
+				<longitude>34.97076065784739</longitude>
+				<latitude>-15.68203285331955</latitude>
+				<altitude>0</altitude>
+				<heading>0.01737132430907634</heading>
+				<tilt>30.00177188371082</tilt>
+				<range>621.4577879424118</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_blu-blank</styleUrl>
+			<Point>
+				<gx:drawOrder>1</gx:drawOrder>
+				<coordinates>34.97053094716547,-15.68245923762894,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Gateway</name>
+			<LookAt>
+				<longitude>35.01869090916502</longitude>
+				<latitude>-15.80434778973864</latitude>
+				<altitude>0</altitude>
+				<heading>-0.001262706843233112</heading>
+				<tilt>30.00178839460476</tilt>
+				<range>398.223189122457</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_blu-blank</styleUrl>
+			<Point>
+				<gx:drawOrder>1</gx:drawOrder>
+				<coordinates>35.01804423270267,-15.80462388371698,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Hajira</name>
+			<LookAt>
+				<longitude>35.07469917368955</longitude>
+				<latitude>-15.82963999880897</latitude>
+				<altitude>0</altitude>
+				<heading>-0.02452065850090727</heading>
+				<tilt>21.858696687946</tilt>
+				<range>423.2481441621335</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_blu-blank</styleUrl>
+			<Point>
+				<gx:drawOrder>1</gx:drawOrder>
+				<coordinates>35.07405917525792,-15.82934741981243,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Makwasa pvt clinic</name>
+			<description><![CDATA[258-1710
+
+<br />Elevation = 3486.54 ft
+<br />Coordinates = S15.75018°  E035.08056°
+<br />Type = Blue Flag]]></description>
+			<LookAt>
+				<longitude>35.080562</longitude>
+				<latitude>-15.750179</latitude>
+				<altitude>0</altitude>
+				<heading>0</heading>
+				<tilt>0</tilt>
+				<range>200</range>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#BlueFlag1810</styleUrl>
+			<Point>
+				<coordinates>35.080562,-15.750179,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Chichiri prison</name>
+			<description><![CDATA[155-2810-01
+
+<br />Elevation = 3457.44 ft
+<br />Coordinates = S15.80575°  E035.03273°
+<br />Type = Blue Flag]]></description>
+			<LookAt>
+				<longitude>35.032734</longitude>
+				<latitude>-15.80575</latitude>
+				<altitude>0</altitude>
+				<heading>0</heading>
+				<tilt>0</tilt>
+				<range>200</range>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_blu-blank</styleUrl>
+			<Point>
+				<coordinates>35.032734,-15.80575,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Kanjeza Masm</name>
+			<LookAt>
+				<longitude>35.05510355408778</longitude>
+				<latitude>-15.81223950894946</latitude>
+				<altitude>0</altitude>
+				<heading>0.008880270331823472</heading>
+				<tilt>27.29302895566807</tilt>
+				<range>450.8909921729543</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_blu-blank</styleUrl>
+			<Point>
+				<gx:drawOrder>1</gx:drawOrder>
+				<coordinates>35.05509746671206,-15.81243776353169,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Mtengoumodzi</name>
+			<LookAt>
+				<longitude>35.01716914338117</longitude>
+				<latitude>-15.7255499447795</latitude>
+				<altitude>0</altitude>
+				<heading>0.003020173131538505</heading>
+				<tilt>28.65290101232194</tilt>
+				<range>391.0995851542315</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_blu-blank</styleUrl>
+			<Point>
+				<gx:drawOrder>1</gx:drawOrder>
+				<coordinates>35.0171055726606,-15.72498713414473,0</coordinates>
+			</Point>
+		</Placemark>
+	</Folder>
+</Document>
+</kml>

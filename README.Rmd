@@ -1,20 +1,28 @@
+---
+output: github_document
+---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
 # mlwdata: a repository of datasets for MLW population health in Malawi
 
 <!-- badges: start -->
-
 <!-- badges: end -->
 
-mlwdata contains a set of annotated datasets that have been collected as
-part of research studies conducted at the Malawi-Liverpool-Wellcome
-Trust Clinical Research Programme in Blantyre, Malawi.
+mlwdata contains a set of annotated datasets that have been collected as part of research studies conducted at the Malawi-Liverpool-Wellcome Trust Clinical Research Programme in Blantyre, Malawi.
 
 The main aims are to:
 
-  - ensure consistent use of data between and within studies over time
-  - facilitate sharing of data to reduce duplication of efforts
+ - ensure consistent use of data between and within studies over time
+ - facilitate sharing of data to reduce duplication of efforts
 
 ## Installation
 
@@ -31,39 +39,33 @@ devtools::install_github("petermacp/mlwdata")
 
 Currently, the following datasets are available:
 
-**scale\_72\_clusters** <br> A `sf` MULTIPOLYGON object, containing
-polygon boundaries and cluster IDs for the SCALE Study (Corbett et al),
-with variables:
-
-  - `cluster`: unique identifier for each of the 72 study clusters
-  - `geometery`: a list column, containing polygons for each cluster
-    boundary.
-
+**scale_72_clusters**
 <br>
+A `sf` MULTIPOLYGON object, containing polygon boundaries and cluster IDs for the SCALE Study (Corbett et al), with variables:
 
-**blantyre\_clinics** <br> A `sf` POINT object, containing coordinates
-for Blantyre clinics/hospitals, and clinic IDs:
+ - `cluster`: unique identifier for each of the 72 study clusters
+ - `geometery`: a list column, containing polygons for each cluster boundary.
+ 
+<br>
+ 
+**blantyre_clinics**
+<br>
+A `sf` POINT object, containing coordinates for Blantyre clinics/hospitals, and clinic IDs:
 
-  - `clinic`: unique name of each of the 18 clinics/hospitals
-  - `geometry`: a list column, containing points for each
-    clinic/hospital.
+ - `clinic`: unique name of each of the 18 clinics/hospitals
+ - `geometry`: a list column, containing points for each clinic/hospital.
 
 <br>
 
 ## Examples
 
-The SCALE Study defined 72 geographical cluster boundaries in urban
-Blantyre using GPS waypaths. These clusters can be loaded and plotted:
+The SCALE Study defined 72 geographical cluster boundaries in urban Blantyre using GPS waypaths. These clusters can be loaded and plotted:
 
-``` r
+```{r example, message=FALSE, warning=FALSE, fig.width=11, fig.height=11}
 library(mlwdata)
 library(tidyverse)
 
 glimpse(scale_72_clusters)
-#> Observations: 72
-#> Variables: 2
-#> $ cluster  <chr> "c1", "c2", "c3", "c4", "c5", "c6", "c7", "c8", "c9", "…
-#> $ geometry <list> [35.05040, 35.05040, 35.05040, 35.05040, 35.05040, 35.…
 
 
 ggplot(scale_72_clusters) +
@@ -75,13 +77,12 @@ ggplot(scale_72_clusters) +
        x="",
        y="",
        caption = "Corbett, MacPherson et al.")
+  
 ```
-
-<img src="man/figures/README-example-1.png" width="100%" />
 
 We could add on the location of the clinics in Blantyre.
 
-``` r
+```{r example2, message=FALSE, warning=FALSE, fig.width=11, fig.height=18}
 
 library(sf)
 library(ggrepel)
@@ -109,6 +110,7 @@ ggplot() +
        y="",
        caption = "Corbett, MacPherson et al.") +
   coord_sf()
+
+
 ```
 
-<img src="man/figures/README-example2-1.png" width="100%" />

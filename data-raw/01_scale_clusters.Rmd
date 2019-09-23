@@ -1,0 +1,185 @@
+---
+title: "SCALE Study"
+
+subtitle: "Tidy-up the shapefiles for 72 clusters"
+
+author: |
+  | Peter MacPherson
+  |
+  | Liverpool School of Tropical Medicine, Liverpool, UK
+  | Malawi-Liverpool-Wellcome Clinical Research Programme, Blantyre, Malawi
+  |
+
+date: | 
+  | `r format(Sys.time(), "%B %d, %Y")`
+  |
+  | Table of Contents:
+output: 
+  html_document:
+    theme: cosmo
+    highlight: espresso
+    toc: true
+---
+
+<br>
+
+## 1. Backgound
+
+Use this script to clean the SCALE Study clusters for future studies
+
+<br>
+
+## 2. Set-up
+
+Load all required packages for analysis.
+
+```{r setup, echo=FALSE, include=FALSE, message=FALSE, comment=NA, warning=FALSE}
+library(tidyverse)    #for data manipulation
+library(sf)
+library(lwgeom)
+library(ggforce)
+library(spdep)
+library(rgeos)
+library(knitr)
+library(here)
+
+```
+
+<br>
+
+## 3. Import datasets
+
+Import data required for the analysis.
+
+```{r import}
+
+raw_scale_clusters <- st_read(here::here("data-raw/01_scale_clusters/72_clusters_polyg_scale.shp"))
+
+#add an ID for each cluster
+raw_scale_clusters <- raw_scale_clusters %>%
+  mutate(cluster = paste0("c",row_number())) %>%
+  dplyr::select(cluster, geometry)
+
+
+ggplot(raw_scale_clusters) +
+  geom_sf() +
+  theme_minimal()
+
+```
+
+<br>
+
+## 4. Tidying and recoding
+
+try tidying up the slivers
+
+```{r tidy}
+
+#what is the crs for object currently
+st_crs(raw_scale_clusters)
+
+#what attributes does it have?
+print(head(raw_scale_clusters))
+
+#Is a single polygon, so needs to be converted to a MULTIPOLYGON
+raw_scale_clusters <- st_cast(raw_scale_clusters, "MULTIPOLYGON")
+
+#did that work?
+print(head(raw_scale_clusters))
+st_is_valid(raw_scale_clusters, reason = TRUE)
+
+#So there are some non-valid clusters, because boundaries self-intersect, or have slivers
+#Try to make these polygons valid
+raw_scale_clusters <- st_make_valid(raw_scale_clusters)
+st_is_valid(raw_scale_clusters)
+
+#Looks like that fixed it.
+
+ggplot(raw_scale_clusters) +
+  geom_sf() +
+  theme_minimal()
+
+#write to shapefile for checking slivers
+#st_write(raw_scale_clusters, "raw_scale_cluster.shp")
+
+#There are still some slivers
+raw_scale_clusters <- raw_scale_clusters %>%
+  st_buffer(.00001) 
+
+#write to shapefile for checking slivers
+#st_write(raw_scale_clusters, "raw_scale_cluster2.shp")
+
+#did that work?
+print(head(raw_scale_clusters))
+st_is_valid(raw_scale_clusters, reason = TRUE)
+
+#covert back into a MULTIPOLYGON
+raw_scale_clusters <- st_cast(raw_scale_clusters, "MULTIPOLYGON")
+
+#write to shapefile for checking slivers
+#st_write(raw_scale_clusters, "raw_scale_cluster3.shp")
+
+#By checking on QGIS - boundaries are now resolved
+
+scale_72_clusters <- raw_scale_clusters
+
+```
+
+Plot with labels
+
+
+```{r}
+
+ggplot(scale_72_clusters) +
+  geom_sf() +
+  geom_sf_text(aes(label=cluster), colour="blue") +
+  theme_minimal() +
+  labs(title="SCALE Study: 72 clusters",
+       x="",
+       y="")
+
+ggsave(here::here("plots/scale_72_clusters.pdf"), dpi=600)
+
+use_data(scale_72_clusters, overwrite = TRUE)
+
+```
+
+
+
+
+
+Now check by looking for adjacency of boundaries
+
+```{r}
+
+
+sy2 <- poly2nb(as(scale_72_clusters, "Spatial"), row.names = scale_72_clusters$cluster, queen=FALSE, snap = 0.0001)
+summary(sy2)
+
+head(sy2)
+
+plot(st_geometry(scale_72_clusters), borders="grey")
+plot(sy2, coordinates(as(scale_72_clusters, "Spatial")), col="darkgreen", add=TRUE)
+```
+
+
+<br>
+
+## 5. Reproducibility
+
+This reproduction of the analysis was run by: 
+
+```{r sysinfo, echo=FALSE, message=FALSE, comment=NA, warning=FALSE}
+
+sysinfo <- Sys.info()
+
+sysinfo <- data.frame(keyName=names(sysinfo), value=sysinfo, row.names=NULL)
+
+sysinfo %>% kable()
+```
+
+Analysis was run at **`r Sys.time()`**, and using the following Session Info:
+
+```{r sessioninfo, echo=FALSE, results='markdown', message=FALSE, comment=NA, warning=FALSE}
+sessionInfo()
+```

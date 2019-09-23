@@ -1,0 +1,13 @@
+Package: mlwdata
+Title: A repository of datasets from the Malawi MLW Clinical Research Programme 
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Peter",
+           family = "MacPherson",
+           role = c("aut", "cre"),
+           email = "peter.macpherson@lstmed.ac.uk",
+           comment = c(ORCID = "0000-0002-0329-9613"))
+Description: Contains a repository of population health datasets that can be used by research groups across the MLW Clinical Research Programme.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
