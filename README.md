@@ -50,6 +50,22 @@ for Blantyre clinics/hospitals, and clinic IDs:
 
 <br>
 
+**blantyre\_census\_blantyre\_census\_2008\_2018** <br> A `tibble`,
+containing age, sex and district-stratfied (Blantyre City, Blantyre
+Rural) population estimates from the 2008 and 2018 Malawi National
+Census. These data were provided by the Malwai National Statistics
+Office in October 2019.
+
+  - `District`: either Blantyre City, or Blantyre Rural (as classified
+    in the Census)
+  - `Year`: census year (2008 or 2018)
+  - `Age`: age group of population estimates
+  - `Total`: total population
+  - `Male`: Male population
+  - `Female`: Female population
+
+<br>
+
 ## Examples
 
 The SCALE Study defined 72 geographical cluster boundaries in urban
