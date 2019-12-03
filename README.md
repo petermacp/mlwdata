@@ -49,11 +49,10 @@ for Blantyre clinics/hospitals, and clinic IDs:
 
 <br>
 
-**blantyre\_census\_blantyre\_census\_2008\_2018** <br> A `tibble`,
-containing age, sex and district-stratfied (Blantyre City, Blantyre
-Rural) population estimates from the 2008 and 2018 Malawi National
-Census. These data were provided by the Malwai National Statistics
-Office in October 2019.
+**blantyre\_census\_2008\_2018** <br> A `tibble`, containing age, sex
+and district-stratfied (Blantyre City, Blantyre Rural) population
+estimates from the 2008 and 2018 Malawi National Census. These data were
+provided by the Malwai National Statistics Office in October 2019.
 
   - `District`: either Blantyre City, or Blantyre Rural (as classified
     in the Census)
@@ -126,6 +125,54 @@ registration centres between Q1 2011 and Q4 2018
     from either the routine health system or the study research lab
     sample, or a positive Xpert result was obtained from the routine
     health system.
+
+<br>
+
+**acf\_cnrs\_overall** <br> A `tibble`, containing TB case notification
+rates (all cases) per 100,000 population between Q1 2009 and q4 2018,
+stratifed by active case finding intervention area
+
+  - `year_q`: Annual quarter
+  - `acf`: Whether TB case’s household was located in the ACF
+    intervention area of Blantyre City (`ACF`), or the non-ACF area of
+    Blantyre City `Non-ACF`
+  - `cases`: Number of registered TB cases per category
+  - `tbcases`: Classification of TB cases (microbiologically-confirmed
+    or all cases)
+  - `population`: Total population per strata
+  - `q_population`: Total population per strata/4 (for CNR estimates)
+  - `cnr`: TB case notification rate, per 100,000 per strata
+  - `conf.low`: Lower bound of CNR 95% confidence interval
+  - `conf.high`: Upper bound of CNR 95% confidence interval
+  - `period`: Active case finding intervention period (`pre-ACF` =
+    before ACF implemented; `ACF` = during ACF intervention; `post-ACF`
+    = after ACF intervention implemented)
+
+<br>
+
+**acf\_smrpos\_cnrs\_overall** <br> A `tibble`, containing TB case
+notification rates (smear or xpert-positive cases) per 100,000
+population between Q1 2009 and q4 2018, stratifed by active case finding
+intervention area. Note cases are classified as Smear/Xpert positive if
+a positive sputum smear result was obtained from either the routine
+health system or the study research lab sample, or a positive Xpert
+result was obtained from the routine health system.
+
+  - `year_q`: Annual quarter
+  - `acf`: Whether TB case’s household was located in the ACF
+    intervention area of Blantyre City (`ACF`), or the non-ACF area of
+    Blantyre City `Non-ACF`
+  - `cases`: Number of registered TB cases per category
+  - `tbcases`: Classification of TB cases (microbiologically-confirmed
+    or all cases)
+  - `population`: Total population per strata
+  - `q_population`: Total population per strata/4 (for CNR estimates)
+  - `cnr`: TB case notification rate, per 100,000 per strata
+  - `conf.low`: Lower bound of CNR 95% confidence interval
+  - `conf.high`: Upper bound of CNR 95% confidence interval
+  - `period`: Active case finding intervention period (`pre-ACF` =
+    before ACF implemented; `ACF` = during ACF intervention; `post-ACF`
+    = after ACF intervention implemented)
 
 <br>
 
