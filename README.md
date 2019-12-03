@@ -66,6 +66,24 @@ Office in October 2019.
 
 <br>
 
+**blantyre\_tb\_cases\_2009\_2018** <br> A `tibble`, containing numbers
+of TB cases notified in Blantyre TB registration centres between Q1 2009
+and Q4 2018 by quarter, and stratified by active case finding area of
+the city (acf vs. non-acf), and microbiological status of cases
+
+  - `year_q`: Annual quarter
+  - `acf`: Area of Blantyre City (ACF = received active case finding
+    intervention; non-ACF = didn’t receive active case finding
+    intervention)
+  - `tbcases`: Classification of TB diagnosis (`Smr/Xpert-positive`
+    cases = cases that were either smear or xpert positive in testing by
+    the routine clinic programme, or smear-positive by the research TB
+    lab; `All cases` = all cases started on treatment, regardless of
+    microbiological status)
+  - `n`: number of cases in category
+
+<br>
+
 ## Examples
 
 The SCALE Study defined 72 geographical cluster boundaries in urban
