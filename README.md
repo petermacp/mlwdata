@@ -64,6 +64,44 @@ provided by the Malwai National Statistics Office in October 2019.
 
 <br>
 
+**blantyre\_census\_by\_q** <br> A `tibble`, containing age, sex and
+district-stratfied (Blantyre City, Blantyre Rural) population, with
+linear interpolation by quarter, from the 2008 and 2018 Malawi National
+Census. These data were provided by the Malwai National Statistics
+Office in October 2019.
+
+  - `district`: either Blantyre City, or Blantyre Rural (as classified
+    in the Census)
+  - `year`: census year (2008 or 2018)
+  - `age`: age group of population estimates
+  - `quarter`: quarter of the year
+  - `year_q`: concatenated year and quarter
+  - `sex`: male or female
+  - `population`: population estimate
+
+<br>
+
+**hiv\_pops\_blantyre\_city** <br> A `tibble`, containing estimates of
+HIV prevalence for Blantyre City, stratified by age, sex and quarter
+between 2008 and 2018. Population estimates are from Malawi National
+Census 2008 and 2018 estimates. HIV prevalence estimates are from an
+HIV-prevalence survey conducted in 2014-15 in North West Blantyre. Age
+and Sex specific HIV-prevalence estimates were multiplied by population
+demoninators to obtain numbers of HIV-positive people per
+age-sex-quarter strata. (Note, estimates for adults \[16+\] and Blantyre
+City only, and *not* Blantyre Rural are provided).
+
+  - `year_q`: concatenated year and quarter
+  - `year`: census year (2008 or 2018)
+  - `quarter`: quarter of the year
+  - `sex`: male or female
+  - `age`: age group of population estimates
+  - `hiv_prev`: HIV prevalence in age-sex strata
+  - `population`: number of HIV-positive people in age-sex-quarter
+    strata
+
+<br>
+
 **blantyre\_tb\_cases\_2009\_2018** <br> A `tibble`, containing numbers
 of TB cases notified in Blantyre TB registration centres between Q1 2009
 and Q4 2018 by quarter, and stratified by active case finding area of
@@ -188,8 +226,8 @@ library(tidyverse)
 glimpse(scale_72_clusters)
 #> Observations: 72
 #> Variables: 2
-#> $ cluster  <chr> "c1", "c2", "c3", "c4", "c5", "c6", "c7", "c8", "c9", "…
-#> $ geometry <list> [35.05040, 35.05040, 35.05040, 35.05040, 35.05040, 35.…
+#> $ cluster  <chr> "c1", "c2", "c3", "c4", "c5", "c6", "c7", "c8", "c9", "c10",…
+#> $ geometry <list> [35.05040, 35.05040, 35.05040, 35.05040, 35.05040, 35.05040…
 
 
 ggplot(scale_72_clusters) +
