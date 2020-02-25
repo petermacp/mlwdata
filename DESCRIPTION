@@ -1,6 +1,6 @@
 Package: mlwdata
 Title: A repository of datasets from the Malawi MLW Clinical Research Programme 
-Version: 0.0.0.9000
+Version: 0.1.0.0000
 Authors@R: 
     person(given = "Peter",
            family = "MacPherson",
